@@ -47,10 +47,14 @@ namespace AddressBook.Controllers
         [HttpPost("/contacts/search")]
         public ActionResult ContactSearchResults()
         {
+            Dictionary<string, object> model = new Dictionary<string, object>();
+            string searchInput = Request.Form["name-search"];
             List<Contact> allContacts = Contact.GetAll();
             List<Contact> matchedContacts = Contact.SearchContacts(allContacts, Request.Form["name-search"]);
+            model.Add("input", searchInput);
+            model.Add("inputMatches", matchedContacts);
             // List<Contact> matchedContacts = Contact.SearchContacts(allContacts, Request.Form["name-search"]);
-            return View(matchedContacts);
+            return View(model);
         }
 
         [HttpPost("/contacts/clear")]

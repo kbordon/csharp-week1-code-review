@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 
 namespace AddressBook.Models
 {
@@ -8,14 +7,12 @@ namespace AddressBook.Models
     {
         private string _name;
         private string _phoneNumber;
-        // private string _address;
         private Address _address;
         private bool _new = true;
         private int _id;
 
         private static List<Contact> _instances = new List<Contact>{};
 
-        //string address put this back into the parends
         public Contact (string name, string phoneNumber, Address address)
         {
             _name = name;
@@ -52,15 +49,6 @@ namespace AddressBook.Models
         {
             _address = newAddress;
         }
-
-        // public string GetAddress()
-        // {
-        //     return _address;
-        // }
-        // public void SetAddress(string newAddress)
-        // {
-        //     _address = newAddress;
-        // }
 
         public bool GetNewStatus()
         {
@@ -106,18 +94,6 @@ namespace AddressBook.Models
         {
             string upperInput = searchInput.ToUpper();
             List<Contact> searchMatch = new List<Contact> {};
-            // char[] splitUpperInput = upperInput.ToCharArray();
-            // List<char> searchList = new List<char>{};
-            // int limit = splitUpperInput.Length;
-            // if (limit > 3)
-            // {
-            //     limit = 3;
-            // }
-            // for (int index = 0; index < limit; index++)
-            // {
-            //     searchList.Add(splitUpperInput[index]);
-            //     Console.WriteLine(splitUpperInput[index]);
-            // }
             foreach (Contact contact in _instances)
             {
                 string upperContactName = contact.GetContactName().ToUpper();
@@ -125,17 +101,6 @@ namespace AddressBook.Models
                 searchMatch.Add(contact);
             }
 
-            // listStrLineElements = line.Split(',').ToList();
-            // foreach(Contact contact in contacts)
-            // {
-            //     Match contactMatch = regex.Match(contact.GetContactName());
-            //     if (match.Success)
-            //     {
-            //         searchMatch.Add(contact);
-            //     }
-            // }
-            // return searchMatch;
-            //
             // Regex regex = new RegEx($@"{searchInput}", RegexOptions.IgnoreCase);
             // List<Contact> searchMatch = new List<Contact> {};
             // foreach(Contact contact in contacts)

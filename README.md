@@ -1,12 +1,12 @@
 # _Address Book_
 
-#### _An address book application for Epicodus C# Object-Oriented C# Code Review , 10.13.2017_
+#### _An address book application for Epicodus Object-Oriented C# Code Review , 10.13.2017_
 
 #### By _**Kimberly Bordon**_
 
 ## Description
 
-_This is an application uses object-oriented C# to store a user's contact list. The user can enter in a single contact, which will store this in a list. They can also choose to see a specific contact, search for one matching input in a search bar, remove a contact, or clear their entire list of contacts. The data is stored and accessed through classes, and static lists._
+_This is an application uses object-oriented C# to store a user's contacts. The user can enter in a single contact, which will store this in a list. They can also choose to see a specific contact, search for contacts matching a search keyword, remove a contact, or clear their entire list of contacts. The data is stored and accessed through unique classes, and static lists._
 
 
 ## Specifications
@@ -14,9 +14,9 @@ _This is an application uses object-oriented C# to store a user's contact list. 
 | Behavior | Input Example | Output Example |
 |----------|---------------|----------------|
 | It will allow user to add a contact's information.| User inputs information| Information is stored and displayed |
-| It will return a confirmation page upon user entering a contact, displaying information they just added. | User adds contact| "You have successfully added a contact."|
+| It will return a confirmation page upon user entering a contact, displaying information just added. | User adds contact| "You have successfully added a contact."|
 | It will list all contacts currently stored on main page by contact's name. | Enters several contacts | All contacts listed on homepage |
-| It will allow user to return to contact's details when clicking their main on the main page list. | Bernard | Bernard ((123-4567)<br> 1 Goode St <br> Portland <br> OR <br> 88888 |
+| It will allow user to return to contact's details when clicking the contact's name on the main page list. | - Abraham <br> - Bernard <br> - Tina | Bernard ((123-4567)<br> 1 Goode St <br> Portland <br> OR <br> 88888 |
 | It will allow user to clear their entire contact list on the homepage. | User clicks clear button| "Your contact list was cleared."|
 | It will allow user to delete an individual contact. | User clicks Remove | This contact has been removed.|
 | It will allow the user to search through their contacts with keyword, and it will return contacts containing the keyword. | Kim | Kimmy <br> Kimberly <br>kim |
@@ -25,9 +25,9 @@ _This is an application uses object-oriented C# to store a user's contact list. 
 * Using terminal or your preferred shell, clone this repository.
   * Alternatively, you can use a browser to download the .zip file from the Github web interface.
 * Using terminal or powershell, navigate to the project's root folder, and then enter the command "dotnet restore".
-* After the packages have been restored, enter the command "dotnet build", and should no errors follow, then enter "dotnet run".
-* If successful, open your web browser, and enter "http://http://localhost:5000/", or whatever location your terminal provides you.
-* Navigate the page using the buttons.
+* After the packages have been restored, enter the command "dotnet run".
+* If successful, open your web browser, and type the URL "http://http://localhost:5000/", or whatever location your terminal provides you.
+* Navigate the application using the buttons.
 * When finished, exit the browser, and don't forget to close your server with ctrl + c on your terminal.
 
 

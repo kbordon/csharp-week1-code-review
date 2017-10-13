@@ -26,5 +26,12 @@ namespace AddressBook.Controllers
             Contact newContact = new Contact(Request.Form["contact-name"], Request.Form["contact-phone"], Request.Form["contact-address"]);
             return View("ContactCreate", newContact);
         }
+
+        [HttpGet("/contacts/{id}")]
+        public ActionResult ContactDetail(int id)
+        {
+            Contact selectedContact = Contact.Find(id);
+            return View(selectedContact);
+        }
     }
 }

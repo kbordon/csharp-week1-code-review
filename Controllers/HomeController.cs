@@ -23,7 +23,8 @@ namespace AddressBook.Controllers
         [HttpPost("/contacts/new")]
         public ActionResult ContactFormResult()
         {
-            Contact newContact = new Contact(Request.Form["contact-name"], Request.Form["contact-phone"], Request.Form["contact-address"]);
+            Address newAddress = new Address(Request.Form["address-street"],Request.Form["address-city"],Request.Form["address-state"], Request.Form["address-zip"]);
+            Contact newContact = new Contact(Request.Form["contact-name"], Request.Form["contact-phone"], newAddress);
             return View("ContactDetail", newContact);
         }
 

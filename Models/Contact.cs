@@ -6,13 +6,15 @@ namespace AddressBook.Models
     {
         private string _name;
         private string _phoneNumber;
-        private string _address;
+        // private string _address;
+        private Address _address;
         private bool _new = true;
         private int _id;
 
         private static List<Contact> _instances = new List<Contact>{};
 
-        public Contact (string name, string phoneNumber, string address)
+        //string address put this back into the parends
+        public Contact (string name, string phoneNumber, Address address)
         {
             _name = name;
             _phoneNumber = phoneNumber;
@@ -39,14 +41,24 @@ namespace AddressBook.Models
             _phoneNumber = newPhoneNumber;
         }
 
-        public string GetAddress()
+        public Address GetAddress()
         {
             return _address;
         }
-        public void SetAddress(string newAddress)
+
+        public void SetAddress(Address newAddress)
         {
             _address = newAddress;
         }
+
+        // public string GetAddress()
+        // {
+        //     return _address;
+        // }
+        // public void SetAddress(string newAddress)
+        // {
+        //     _address = newAddress;
+        // }
 
         public bool GetNewStatus()
         {

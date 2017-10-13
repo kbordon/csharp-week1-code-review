@@ -15,6 +15,16 @@ namespace AddressBook.Controllers
         }
 
         [HttpGet("/contacts/new")]
-        public ActionResult 
+        public ActionResult ContactForm()
+        {
+            return View();
+        }
+
+        [HttpPost("/contacts/new")]
+        public ActionResult ContactFormResult()
+        {
+            Contact newContact = new Contact(Request.Form["contact-name"], Request.Form["contact-phone"], Request.Form["contact-address"]);
+            return View("ContactCreate", newContact);
+        }
     }
 }

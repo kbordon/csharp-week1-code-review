@@ -14,6 +14,8 @@ namespace AddressBook.Models
         public Contact (string name, string phoneNumber, string address)
         {
             _name = name;
+            _phoneNumber = phoneNumber;
+            _address = address;
             _instances.Add(this);
             _id = _instances.Count;
         }

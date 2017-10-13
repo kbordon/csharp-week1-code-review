@@ -93,6 +93,11 @@ namespace AddressBook.Models
         public static void RemoveContact(int id)
         {
             _instances.RemoveAt(id-1);
+            for (int changeIdIndex = id -1; changeIdIndex < _instances.Count; changeIdIndex++)
+            {
+                _instances[changeIdIndex]._id = _instances[changeIdIndex]._id - 1;
+            }
+
         }
 
     }

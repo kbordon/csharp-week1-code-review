@@ -1,10 +1,10 @@
 @{
     Layout = "_Layout";
 }
-<h1>Your search for "@Model["input"]" has the following results:</h1>
+<h1>Your search for "<strong>@Model["input"]</strong>" has the following results:</h1>
     @if (Model["inputMatches"].Count == 0 )
   {
-  <h3>Sorry, your search could not find a match.</h3>
+  <h3><em>Sorry, your search could not find a match.</em></h3>
   }
 else
   {
@@ -15,8 +15,6 @@ else
       }
     </ul>
   }
-
-
 
 <form action='/contacts/search' method='post'>
     <div class="form-group">

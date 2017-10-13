@@ -1,3 +1,38 @@
-.jumbotron {
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Quicksand');
+#header {
     text-align: center;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+    background: black;
+    color: #ffffcc;
+    padding: 10px;
+    height: 125px;
+    box-shadow: 0px 1px 5px black;
+    position: fixed;
+}
+
+#header h1{
+    font-size: 36px;
+    letter-spacing: 10px;
+    margin-bottom: 0px;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    background-color: #ffffcc;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+}
+
+.container-body {
+    margin-top: 150px;
+}
+
+.form-control {
+    width: 60%;
 }

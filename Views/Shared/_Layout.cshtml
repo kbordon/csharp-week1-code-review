@@ -7,10 +7,8 @@
         <link href="/css/styles.css" rel="stylesheet">
     </head>
     <body>
-        <div class="container">
-            <div class="jumbotron">
-                <h1>Address Book</h1>
-            </div>
+        @Html.Partial("Header")
+        <div class="container container-body">
             @RenderBody()
         </div>
     </body>

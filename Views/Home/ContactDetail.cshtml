@@ -4,9 +4,12 @@
     }
 <h2>Contact Details</h2>
 <h2>@Model.GetContactName()</h2>
+<h3>@Model.GetPhone()</h3>
 <ul>
-    <li>@Model.GetPhone()</li>
-    /*<li>@Model.GetAddress()</li>*/
+    <li>@Model.GetAddress().GetStreet()</li>
+    <li>@Model.GetAddress().GetCity()</li>
+    <li>@Model.GetAddress().GetState()</li>
+    <li>@Model.GetAddress().GetZip()</li>
 </ul>
 <form action='/contacts/@Model.GetId()/remove' method="post">
     <button type="submit">Remove This Contact</button>

@@ -102,19 +102,49 @@ namespace AddressBook.Models
 
         }
 
-        public static List<Contact> SearchContacts(List<Contact> contacts, string searchInput)
+        public static void SearchContacts(List<Contact> contacts, string searchInput)
         {
-            Regex regex = new RegEx($@"{searchInput}", RegexOptions.IgnoreCase);
-            List<Contact> searchMatch = new List<Contact> {};
-            foreach(Contact contact in contacts)
+            string upperInput = searchInput.ToUpper();
+            char[] splitUpperInput = upperInput.ToCharArray();
+            List<char> searchList = new List<char>{};
+            int limit = splitUpperInput.Length;
+            if (limit > 3)
             {
-                Match contactMatch = regex.Match(contact.GetContactName());
-                if (match.Success)
-                {
-                    searchMatch.Add(contact);
-                }
+                limit = 3;
             }
-            return searchMatch;
+            for (int index = 0; index < limit; index++)
+            {
+                searchList.Add(splitUpperInput[index]);
+                Console.WriteLine(splitUpperInput[index]);
+            }
+            foreach (Contact contact in _instances)
+            {
+                if()
+            }
+
+            // listStrLineElements = line.Split(',').ToList();
+            // List<Contact> searchMatch = new List<Contact> {};
+            // foreach(Contact contact in contacts)
+            // {
+            //     Match contactMatch = regex.Match(contact.GetContactName());
+            //     if (match.Success)
+            //     {
+            //         searchMatch.Add(contact);
+            //     }
+            // }
+            // return searchMatch;
+            //
+            // Regex regex = new RegEx($@"{searchInput}", RegexOptions.IgnoreCase);
+            // List<Contact> searchMatch = new List<Contact> {};
+            // foreach(Contact contact in contacts)
+            // {
+            //     Match contactMatch = regex.Match(contact.GetContactName());
+            //     if (match.Success)
+            //     {
+            //         searchMatch.Add(contact);
+            //     }
+            // }
+            // return searchMatch;
         }
 
     }

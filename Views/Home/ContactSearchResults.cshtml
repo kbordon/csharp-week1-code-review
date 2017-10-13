@@ -1,8 +1,8 @@
 <h1>Your search for INSERTNAMEHERE has the following results:</h1>
 <ul>
-  @foreach(var artist in Model)
+  @foreach(var contact in Model)
   {
-    <li>@artist.Maker</li>
+    <li>@contact.GetContactName()</li>
   }
 </ul>
 

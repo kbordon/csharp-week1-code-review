@@ -45,11 +45,12 @@ namespace AddressBook.Controllers
         }
 
         [HttpPost("/contacts/search")]
-        public ActionResult  ContactSearchResults()
+        public ActionResult ContactSearchResults()
         {
             List<Contact> allContacts = Contact.GetAll();
-            List<Contact> matchedContacts = Contact.SearchContacts(allContacts, Request.Form["name-search"]);
-            return View(matchedContacts);
+            Contact.SearchContacts(allContacts, Request.Form["name-search"]);
+            // List<Contact> matchedContacts = Contact.SearchContacts(allContacts, Request.Form["name-search"]);
+            return View(allContacts);
         }
 
         [HttpPost("/contacts/clear")]

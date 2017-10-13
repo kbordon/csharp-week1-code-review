@@ -48,9 +48,9 @@ namespace AddressBook.Controllers
         public ActionResult ContactSearchResults()
         {
             List<Contact> allContacts = Contact.GetAll();
-            Contact.SearchContacts(allContacts, Request.Form["name-search"]);
+            List<Contact> matchedContacts = Contact.SearchContacts(allContacts, Request.Form["name-search"]);
             // List<Contact> matchedContacts = Contact.SearchContacts(allContacts, Request.Form["name-search"]);
-            return View(allContacts);
+            return View(matchedContacts);
         }
 
         [HttpPost("/contacts/clear")]

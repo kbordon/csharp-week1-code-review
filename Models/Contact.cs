@@ -102,28 +102,30 @@ namespace AddressBook.Models
 
         }
 
-        public static void SearchContacts(List<Contact> contacts, string searchInput)
+        public static List<Contact> SearchContacts(List<Contact> contacts, string searchInput)
         {
             string upperInput = searchInput.ToUpper();
-            char[] splitUpperInput = upperInput.ToCharArray();
-            List<char> searchList = new List<char>{};
-            int limit = splitUpperInput.Length;
-            if (limit > 3)
-            {
-                limit = 3;
-            }
-            for (int index = 0; index < limit; index++)
-            {
-                searchList.Add(splitUpperInput[index]);
-                Console.WriteLine(splitUpperInput[index]);
-            }
+            List<Contact> searchMatch = new List<Contact> {};
+            // char[] splitUpperInput = upperInput.ToCharArray();
+            // List<char> searchList = new List<char>{};
+            // int limit = splitUpperInput.Length;
+            // if (limit > 3)
+            // {
+            //     limit = 3;
+            // }
+            // for (int index = 0; index < limit; index++)
+            // {
+            //     searchList.Add(splitUpperInput[index]);
+            //     Console.WriteLine(splitUpperInput[index]);
+            // }
             foreach (Contact contact in _instances)
             {
-                if()
+                string upperContactName = contact.GetContactName().ToUpper();
+                if(upperContactName.Contains(upperInput) == true)
+                searchMatch.Add(contact);
             }
 
             // listStrLineElements = line.Split(',').ToList();
-            // List<Contact> searchMatch = new List<Contact> {};
             // foreach(Contact contact in contacts)
             // {
             //     Match contactMatch = regex.Match(contact.GetContactName());
@@ -144,7 +146,7 @@ namespace AddressBook.Models
             //         searchMatch.Add(contact);
             //     }
             // }
-            // return searchMatch;
+            return searchMatch;
         }
 
     }

@@ -1,20 +1,45 @@
 @{
     Layout = "_Layout";
 }
-@if (@Model.GetNewStatus()==true)
-    {
-        <h1>You've successfully added a new contact.</h1>
-    }
-<h2>Contact Details</h2>
-<h2>@Model.GetContactName()</h2>
-<h3>@Model.GetPhone()</h3>
-<ul>
-    <li>@Model.GetAddress().GetStreet()</li>
-    <li>@Model.GetAddress().GetCity()</li>
-    <li>@Model.GetAddress().GetState()</li>
-    <li>@Model.GetAddress().GetZip()</li>
-</ul>
-<form action='/contacts/@Model.GetId()/remove' method="post">
-    <button type="submit">Remove This Contact</button>
-</form>
-<p><a href='/'>Return Home</a></p>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-3 col-sm-3 col-xl-3 col-lg-3">
+            <a href="/"><button type="button" class="btn btn-warning">Return Home</button></a>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-xl-6 col-lg-6">
+            <form action='/contacts/search' method='post'>
+                <div class="form-group">
+                    <label for='name-search'>Search by name:</label>
+                    <input id='name-search' name='name-search' type='text'>
+                    <button type="submit" class="btn-sm btn-primary">Search</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-xl-3 col-lg-3">
+            <form action="/contacts/clear" method="post">
+                <button type="submit" class="btn btn-danger">Clear List</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-xl-12 col-lg-12">
+            @if (@Model.GetNewStatus()==true)
+                {
+                    <h2>You've successfully added a new contact.</h2>
+                }
+                <h2 class="detail-name">@Model.GetContactName() <span class="detail-phone">@Model.GetPhone()</span></h2>
+            <ul>
+                <li>@Model.GetAddress().GetStreet()</li>
+                <li class="list-unstyled">@Model.GetAddress().GetCity()</li>
+                <li class="list-unstyled">@Model.GetAddress().GetState()</li>
+                <li class="list-unstyled">@Model.GetAddress().GetZip()</li>
+            </ul>
+            <br>
+            <br>
+            <br>
+            <form action='/contacts/@Model.GetId()/remove' method="post">
+                <button type="submit" class="btn btn-default">Remove This Contact</button>
+            </form>
+        </div>
+    </div>
+</div>

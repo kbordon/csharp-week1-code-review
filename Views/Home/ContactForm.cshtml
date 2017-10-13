@@ -1,44 +1,57 @@
 @{
     Layout = "_Layout";
 }
-<h1>Add a Contact</h1>
-@* <form action='/contacts/new' method='post'>
-    <label for='contact-name'>Full Name</label>
-    <input id='contact-name' name='contact-name' type='text'>
-    <label for='contact-phone'>Phone Number</label>
-    <input id='contact-phone' name='contact-phone' type='text'>
-    <label for='contact-address'>Address</label>
-    <input id='contact-address' name='contact-address' type='text'>
-    <button type='submit'>Add</button>
-</form> *@
-<form action='/contacts/new' method='post'>
-    <div class="form-group">
-        <label for='contact-name'>Full Name:</label>
-        <input id='contact-name' class="form-control" name='contact-name' type='text'>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-3 col-sm-3 col-xl-3 col-lg-3">
+            <a href="/"><button type="button" class="btn btn-warning">Return Home</button></a>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-xl-6 col-lg-6">
+            <form action='/contacts/search' method='post'>
+                <div class="form-group">
+                    <label for='name-search'>Search by name:</label>
+                    <input id='name-search' name='name-search' type='text'>
+                    <button type="submit" class="btn-sm btn-primary">Search</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-xl-3 col-lg-3">
+            <form action="/contacts/clear" method="post">
+                <button type="submit" class="btn btn-danger">Clear List</button>
+            </form>
+        </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-xl-12 col-lg-12">
+            <h2>Add a Contact</h2>
+            <form action='/contacts/new' method='post'>
+                <div class="form-group">
+                    <label for='contact-name'>Full Name:</label>
+                    <input id='contact-name' class="form-control" name='contact-name' type='text'>
+                </div>
+                <div class="form-group">
+                    <label for='contact-phone'>Phone Number:</label>
+                    <input id='contact-phone' class="form-control" name='contact-phone' type='text'>
+                </div>
+                <div class="form-group">
+                    <label for='address-street'>Street Address:</label>
+                    <input id='address-street' class="form-control" name='address-street' type='text'>
+                </div>
+                <div class="form-group">
+                    <label for='address-city'>City:</label>
+                    <input id='address-city' class="form-control" name='address-city' type='text'>
+                </div>
+                <div class="form-group">
+                    <label for='address-state'>State:</label>
+                    <input id='address-state' class="form-control" name='address-state' type='text'>
+                </div>
+                <div class="form-group">
+                    <label for='address-zip'>Zip Code:</label>
+                    <input id='address-zip' class="form-control" name='address-zip' type='type'>
+                </div>
+                <div class="form-group">
+                    <button type='submit' class="btn-lg btn-info">Add</button>
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="form-group">
-        <label for='contact-phone'>Phone Number:</label>
-        <input id='contact-phone' class="form-control" name='contact-phone' type='text'>
-    </div>
-    <div class="form-group">
-        <label for='address-street'>Street Address:</label>
-        <input id='address-street' class="form-control" name='address-street' type='text'>
-    </div>
-    <div class="form-group">
-        <label for='address-city'>City:</label>
-        <input id='address-city' class="form-control" name='address-city' type='text'>
-    </div>
-    <div class="form-group">
-        <label for='address-state'>State:</label>
-        <input id='address-state' class="form-control" name='address-state' type='text'>
-    </div>
-    <div class="form-group">
-        <label for='address-zip'>Zip Code:</label>
-        <input id='address-zip' class="form-control" name='address-zip' type='number'>
-    </div>
-    <div class="form-group">
-        <button type='submit'>Add</button>
-    </div>
-</form>
-
-<a><a href='/'>Back Home</a></p>
+</div>

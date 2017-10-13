@@ -1,6 +1,37 @@
 @{
     Layout = "_Layout";
 }
-<h1>You have removed @Model.GetContactName() from your address book.</h1>
-<p><a href="/">Go to Main Page</a></p>
-<p><a href="/contacts/new">Add a New Contact</a></p>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-3 col-sm-3 col-xl-3 col-lg-3">
+            <a href="/"><button type="button" class="btn btn-warning">Return Home</button></a>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-xl-6 col-lg-6">
+            <form action='/contacts/search' method='post'>
+                <div class="form-group">
+                    <label for='name-search'>Search by name:</label>
+                    <input id='name-search' name='name-search' type='text'>
+                    <button type="submit" class="btn-sm btn-primary">Search</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-xl-3 col-lg-3">
+            <form action="/contacts/clear" method="post">
+                <button type="submit" class="btn btn-danger">Clear List</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-xl-12 col-lg-12">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2>You have removed <em>@Model.GetContactName()</em> from your address book.</h2>
+            <br>
+            <br>
+            <a href="/contacts/new"><button type="button" class="btn btn-info">Add a New Contact</button></a></p>
+        </div>
+    </div>
+</div>

@@ -36,3 +36,15 @@ body {
 .form-control {
     width: 60%;
 }
+
+.main-list {
+    font-size: 24px;
+}
+
+.detail-name {
+    font-weight: bold;
+}
+
+.detail-phone {
+    font-style: italic;
+}

@@ -33,7 +33,7 @@
             <ul>
               @foreach(var contact in Model["inputMatches"])
               {
-                <li><a href='/contacts/@contact.GetId()'>@contact.GetContactName()</a></li>
+                <li class="main-list"><a href='/contacts/@contact.GetId()'>@contact.GetContactName()</a></li>
               }
             </ul>
             }

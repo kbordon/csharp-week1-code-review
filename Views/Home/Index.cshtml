@@ -7,5 +7,15 @@
 </ul>
 
 <p><a href="/contacts/new">Add Another Contact</a>
+
+
+<form action='/contacts/search' method='post'>
+    <div class="form-group">
+        <label for='name-search'>Search by name:</label>
+        <input id='name-search' name='name-search' type='text'>
+    </div>
+</form>
+
 <form action="/contacts/clear" method="post">
 <button type="submit">Clear List</button>
+</form>

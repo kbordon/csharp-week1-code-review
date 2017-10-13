@@ -43,11 +43,21 @@ namespace AddressBook.Controllers
             Contact.RemoveContact(id);
             return View(selectedContact);
         }
+
+        [HttpPost("/contacts/search")]
+        public ActionResult  ContactSearchResults()
+        {
+            List<Contact> allContacts = Contact.GetAll();
+            List<Contact> matchedContacts = Contact.SearchContacts(allContacts, Request.Form["name-search"]);
+            return View(matchedContacts);
+        }
+
         [HttpPost("/contacts/clear")]
         public ActionResult ContactListClear()
         {
             Contact.ClearAll();
             return View();
         }
+
     }
 }

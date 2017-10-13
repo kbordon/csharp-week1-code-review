@@ -1,0 +1,19 @@
+<h1>Your search for INSERTNAMEHERE has the following results:</h1>
+<ul>
+  @foreach(var artist in Model)
+  {
+    <li>@artist.Maker</li>
+  }
+</ul>
+
+<form action='/contacts/search' method='post'>
+    <div class="form-group">
+        <label for='name-search'>Search again?</label>
+        <input id='name-search' name='name-search' type='text'>
+    </div>
+    <div class="form-group">
+        <button type="submit">Search</button>
+    </div>
+</form>
+
+<a href="/">Return Home</a>

@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace AddressBook.Models
 {
@@ -98,6 +100,21 @@ namespace AddressBook.Models
                 _instances[changeIdIndex]._id = _instances[changeIdIndex]._id - 1;
             }
 
+        }
+
+        public static List<Contact> SearchContacts(List<Contact> contacts, string searchInput)
+        {
+            Regex regex = new RegEx($@"{searchInput}", RegexOptions.IgnoreCase);
+            List<Contact> searchMatch = new List<Contact> {};
+            foreach(Contact contact in contacts)
+            {
+                Match contactMatch = regex.Match(contact.GetContactName());
+                if (match.Success)
+                {
+                    searchMatch.Add(contact);
+                }
+            }
+            return searchMatch;
         }
 
     }

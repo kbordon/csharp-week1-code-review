@@ -1,3 +1,6 @@
+@{
+    Layout = "_Layout";
+}
 <h1>Your search for "@Model["input"]" has the following results:</h1>
     @if (Model["inputMatches"].Count == 0 )
   {
@@ -22,7 +25,6 @@ else
     </div>
     <div class="form-group">
         <button type="submit">Search</button>
+        <a href="/"><button type="button">Return Home</button></a>
     </div>
 </form>
-
-<a href="/">Return Home</a>

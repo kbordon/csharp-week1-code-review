@@ -1,22 +1,30 @@
-<h1>Address Book</h1>
-<ul>
-    @foreach(var contact in Model)
-    {
-        <li><a href='/contacts/@contact.GetId()'>@contact.GetContactName()</a></li>
-    }
-</ul>
-
-<p><a href="/contacts/new">Add Another Contact</a>
-
-
+@{
+    Layout = "_Layout";
+}
 <form action='/contacts/search' method='post'>
     <div class="form-group">
+        <h3>Contact List</h3>
         <label for='name-search'>Search by name:</label>
         <input id='name-search' name='name-search' type='text'>
+        <button type="submit" class="btn-sm btn-primary">Search</button>
+        <a href="/contacts/new"><button type="button" class="btn-lg btn-info">Add a Contact</button></a>
     </div>
-    <button type="submit">Clear List</button>
 </form>
 
+@if (Model.Count == 0 )
+{
+<h3>You don't have any contacts entered.</h3>
+}
+else
+{
+    <ul>
+        @foreach(var contact in Model)
+        {
+            <li class="contact-list"><a href='/contacts/@contact.GetId()'>@contact.GetContactName()</a></li>
+        }
+    </ul>
+}
+
 <form action="/contacts/clear" method="post">
-<button type="submit">Clear List</button>
+<button type="submit" class="btn-lg btn-danger">Clear List</button>
 </form>

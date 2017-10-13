@@ -78,5 +78,10 @@ namespace AddressBook.Models
             return _instances[searchId-1];
         }
 
+        public static void RemoveContact(int id)
+        {
+            _instances.RemoveAt(id-1);
+        }
+
     }
 }

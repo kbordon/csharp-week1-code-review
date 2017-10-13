@@ -8,4 +8,7 @@
     <li>@Model.GetPhone()</li>
     <li>@Model.GetAddress()</li>
 </ul>
-<a href='/'>Go back</a>
+<form action='/contacts/@Model.GetId()/remove' method="post">
+    <button type="submit">Remove This Contact</button>
+</form>
+<p><a href='/'>Return Home</a></p>

@@ -35,6 +35,13 @@ namespace AddressBook.Controllers
             return View(selectedContact);
         }
 
+        [HttpPost("/contacts/{id}/remove")]
+        public ActionResult ContactClear(int id)
+        {
+            Contact selectedContact = Contact.Find(id);
+            Contact.RemoveContact(id);
+            return View(selectedContact);
+        }
         [HttpPost("/contacts/clear")]
         public ActionResult ContactListClear()
         {

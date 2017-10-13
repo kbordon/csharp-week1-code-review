@@ -13,5 +13,8 @@ namespace AddressBook.Controllers
             List<Contact> allContacts = Contact.GetAll();
             return View(allContacts);
         }
+
+        [HttpGet("/contacts/new")]
+        public ActionResult 
     }
 }

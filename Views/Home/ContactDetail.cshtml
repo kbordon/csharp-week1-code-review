@@ -1,3 +1,7 @@
+@if (@Model.GetNewStatus()==true)
+    {
+        <h1>You've successfully added a new contact.</h1>
+    }
 <h2>Contact Details</h2>
 <h2>@Model.GetContactName()</h2>
 <ul>

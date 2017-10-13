@@ -24,13 +24,14 @@ namespace AddressBook.Controllers
         public ActionResult ContactFormResult()
         {
             Contact newContact = new Contact(Request.Form["contact-name"], Request.Form["contact-phone"], Request.Form["contact-address"]);
-            return View("ContactCreate", newContact);
+            return View("ContactDetail", newContact);
         }
 
         [HttpGet("/contacts/{id}")]
         public ActionResult ContactDetail(int id)
         {
             Contact selectedContact = Contact.Find(id);
+            selectedContact.ChangeNewStatus();
             return View(selectedContact);
         }
 

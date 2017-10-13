@@ -7,6 +7,7 @@ namespace AddressBook.Models
         private string _name;
         private string _phoneNumber;
         private string _address;
+        private bool _new = true;
         private int _id;
 
         private static List<Contact> _instances = new List<Contact>{};
@@ -45,6 +46,16 @@ namespace AddressBook.Models
         public void SetAddress(string newAddress)
         {
             _address = newAddress;
+        }
+
+        public bool GetNewStatus()
+        {
+            return _new;
+        }
+
+        public void ChangeNewStatus()
+        {
+            _new = false;
         }
 
         public int GetId()

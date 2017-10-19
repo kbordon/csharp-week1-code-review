@@ -16,7 +16,7 @@ _This is an that application uses object-oriented C# to store a user's contacts.
 | It will allow user to add a contact's information.| User inputs information| Information is stored and displayed |
 | It will return a confirmation page upon user entering a contact, displaying information just added. | User adds contact| "You have successfully added a contact."|
 | It will list all contacts currently stored on main page by contact's name. | Enters several contacts | All contacts listed on homepage |
-| It will allow user to return to contact's details when clicking the contact's name on the main page list. | - Abraham <br> - Bernard <br> - Tina | Bernard ((123-4567)<br> 1 Goode St <br> Portland <br> OR <br> 88888 |
+| It will allow user to return to contact's details when clicking the contact's name on the main page list. | - Abraham <br> - Bernard <br> - Tina | Bernard _123-4567_ <br> 1 Goode St <br> Portland <br> OR <br> 88888 |
 | It will allow user to clear their entire contact list on the homepage. | User clicks clear button| "Your contact list was cleared."|
 | It will allow user to delete an individual contact. | User clicks Remove | This contact has been removed.|
 | It will allow the user to search through their contacts with keyword, and it will return contacts containing the keyword. | Kim | Kimmy <br> Kimberly <br>kim |

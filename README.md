@@ -6,7 +6,7 @@
 
 ## Description
 
-_This is an that application uses object-oriented C# to store a user's contacts. The user can enter in a single contact, which will store this in a list. They can also choose to see a specific contact, search for contacts matching a search keyword, remove a contact, or clear their entire list of contacts. The data is stored and accessed through unique classes, and static lists._
+_This is an application that uses object-oriented C# to store a user's contacts. The user can enter in a single contact, which will store this in a list. They can also choose to see a specific contact, search for contacts matching a search keyword, remove a contact, or clear their entire list of contacts. The data is stored and accessed through unique classes, and static lists._
 
 
 ## Specifications

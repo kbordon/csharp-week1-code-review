@@ -55,7 +55,7 @@ namespace AddressBook.Models
             return _new;
         }
 
-        public void ChangeNewStatus()
+        public void MakeNewFalse()
         {
             _new = false;
         }

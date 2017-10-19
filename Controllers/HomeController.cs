@@ -32,7 +32,7 @@ namespace AddressBook.Controllers
         public ActionResult ContactDetail(int id)
         {
             Contact selectedContact = Contact.Find(id);
-            selectedContact.ChangeNewStatus();
+            selectedContact.MakeNewFalse();
             return View(selectedContact);
         }
 

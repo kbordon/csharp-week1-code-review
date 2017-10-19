@@ -29,6 +29,7 @@ _This is an application uses object-oriented C# to store a user's contacts. The 
 * If successful, open your web browser, and type the URL "http://http://localhost:5000/", or whatever location your terminal provides you.
 * Navigate the application using the buttons.
 * When finished, exit the browser, and don't forget to close your server with ctrl + c on your terminal.
+* You can also open this project with a text editor, such as Atom or Visual Studio.
 
 
 ## Support and contact details

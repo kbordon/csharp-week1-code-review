@@ -6,7 +6,7 @@
 
 ## Description
 
-_This is an application uses object-oriented C# to store a user's contacts. The user can enter in a single contact, which will store this in a list. They can also choose to see a specific contact, search for contacts matching a search keyword, remove a contact, or clear their entire list of contacts. The data is stored and accessed through unique classes, and static lists._
+_This is an that application uses object-oriented C# to store a user's contacts. The user can enter in a single contact, which will store this in a list. They can also choose to see a specific contact, search for contacts matching a search keyword, remove a contact, or clear their entire list of contacts. The data is stored and accessed through unique classes, and static lists._
 
 
 ## Specifications
@@ -24,12 +24,12 @@ _This is an application uses object-oriented C# to store a user's contacts. The 
 
 * Using terminal or your preferred shell, clone this repository.
   * Alternatively, you can use a browser to download the .zip file from the Github web interface.
-* Using terminal or powershell, navigate to the project's root folder, and then enter the command "dotnet restore".
+  * You can also open this project with a text editor, such as Atom or Visual Studio.
+* To run the application, using terminal or powershell, navigate to the project's root folder, and then enter the command "dotnet restore".
 * After the packages have been restored, enter the command "dotnet run".
 * If successful, open your web browser, and type the URL "http://http://localhost:5000/", or whatever location your terminal provides you.
 * Navigate the application using the buttons.
 * When finished, exit the browser, and don't forget to close your server with ctrl + c on your terminal.
-* You can also open this project with a text editor, such as Atom or Visual Studio.
 
 
 ## Support and contact details
